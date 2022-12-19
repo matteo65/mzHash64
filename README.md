@@ -3,14 +3,14 @@
 Strong, fast, simple, non-cryptography hash function
 
 ```java
-	public static long mzHash64(byte[] data, int start, int length, long seed) {	
-		long hash = 0xD45E69F901E72147L ^ seed;
-		
-		for(int i = 0; i < length; i++)
-			hash = 0x3631754B22FF2D5CL * (i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
-		
-		return hash;
-	}
+public static long mzHash64(byte[] data, int start, int length, long seed) {	
+	long hash = 0xD45E69F901E72147L ^ seed;
+
+	for(int i = 0; i < length; i++)
+		hash = 0x3631754B22FF2D5CL * (i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
+
+	return hash;
+}
 ```
 ## Uniform distribution of hash values (diffusion)
 It has an absolutely uniform, chaotic distribution of hash values independent of the number, length and type of input values.  
