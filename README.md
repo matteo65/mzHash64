@@ -19,7 +19,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 ## Minimum number of collisions
 MzHash64 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of a Universal Hash Function.
 
-#### 64-bit: number of collisions for data input string "sssss", s from "000000000" to "2540BE3FF". 10,000,000,000 values
+#### Number of collisions for data input string "sssss", s from "000000000" to "2540BE3FF". 10,000,000,000 values
 
 Function |  #Collisions | Values
 :---      |      ---:    | :---
