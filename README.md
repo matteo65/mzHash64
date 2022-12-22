@@ -33,4 +33,9 @@ Murmur3   |         **5**|Collision: **45 F0 06 CF E1 6F F4 D7**<br>Strings: "07
  &nbsp;   |     &nbsp;   |Collision: **7E 7B E5 32 95 6E CC C8**<br>Strings: "05652E7A205652E7A205652E7A205652E7A205652E7A2", "179BFA274179BFA274179BFA274179BFA274179BFA274"
  &nbsp;   |     &nbsp;   |Collision: **C3 DC 2E 55 5B F3 82 A0**<br>Strings: "003AA63E8003AA63E8003AA63E8003AA63E8003AA63E8", "1AB1E788D1AB1E788D1AB1E788D1AB1E788D1AB1E788D"
  
- 
+ #### Number of collisions for binary input bbbbbb, b from 0000000000 to 02540BE3FF. 10,000,000,000 values
+ Function |  #Collisions | Values
+:---      |      ---:    | :---
+MzHash64  |         **0**|&nbsp;
+Murmur3   |         **6**|Collision: **20 1C 0D A0 FC 75 6B 82**<br>Inputs: 018100AFA4018100AFA4018100AFA4018100AFA4018100AFA4008100AFA4, 01B06B986F01B06B986F01B06B986F01B06B986F01B06B986F00B06B986F
+
