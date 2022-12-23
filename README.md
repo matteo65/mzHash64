@@ -17,7 +17,7 @@ It has an absolutely uniform, chaotic distribution of hash values independent of
 It also has a good Avalanche Effect property: even a minimal differences (1 bit) of input values produces very different hash values.  
 
 ## Minimum number of collisions
-MzHash64 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of a Universal Hash Function.
+MzHash64 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of an ideal Universal Hash Function.
 
 #### Number of collisions for data input string "sssss", where s from "000000000" to "2540BE3FF" - 10,000,000,000 values
 
