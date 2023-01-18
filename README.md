@@ -40,6 +40,9 @@ MzHash64|        **0**|&nbsp;
 Murmur3 |        **1**|Collision: **7A 37 28 87 4D A9 F8 1E**<br>Inputs: 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC, 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF
 XXHash  |        **1**|Collision: **50 70 7F C1 20 21 83 0E**<br>Inputs: 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9, 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7
 
+## Speed
+![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash64/main/Resource/mzhash64speed.jpg)
+
 ## Vulnerability
 MzHash64, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
 Like other non-cryptographic functions, its security depends on the secrecy of the possibly used seed.  
