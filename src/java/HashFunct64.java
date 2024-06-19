@@ -54,7 +54,7 @@ public class HashFunct64 {
 		return mzHash64(data, 0, data.length, 0);
 	}
 	
-	public static long mzHash64(byte[] data, int seed) {	
+	public static long mzHash64(byte[] data, long seed) {	
 		return mzHash64(data, 0, data.length, seed);
 	}
 
