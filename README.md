@@ -12,6 +12,8 @@ public static long mzHash64(byte[] data, int start, int length, long seed) {
 	return hash;
 }
 ```
+It is based on the same algorithm as mzHash32, except it uses 64-bit (long) integers.
+
 ## Uniform distribution of hash values (diffusion)
 It has an absolutely uniform, chaotic distribution of hash values independent of the number, length and type of input values.  
 It also has a good Avalanche Effect property: even a minimal differences (1 bit) of input values produces very different hash values.  
