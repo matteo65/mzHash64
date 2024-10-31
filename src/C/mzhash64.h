@@ -9,7 +9,7 @@ extern "C" {
 
 #define MZ_HASH_64_DEFAULT_SEED		0;
 
-uint64_t mzhash64(const int8_t *data, int length, uint64_t seed);
+uint64_t mzhash64(const void* data, int length, uint64_t seed);
 
 #ifdef __cplusplus
 }
