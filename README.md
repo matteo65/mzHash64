@@ -4,11 +4,11 @@ Strong, fast, simple, non-cryptography hash function
 
 ```java
 public static long mzHash64(byte[] data, int start, int length, long seed) {	
-	long hash = 0xD45E69F901E72147L ^ seed;
-
+	long hash = 0xE297DA430DB2DF1AL ^ seed;
+		
 	for(int i = 0; i < length; i++)
-		hash = 0x3631754B22FF2D5CL * (i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
-
+		hash = 0xB2DEEF07CB4ACD43L * (i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
+		
 	return hash;
 }
 ```
