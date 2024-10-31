@@ -37,7 +37,7 @@ public class HashFunct64 {
 
 	private HashFunct64() {}
 
-		public static long mzHash64(byte[] data, int start, int length, long seed) {	
+	public static long mzHash64(byte[] data, int start, int length, long seed) {	
 		long hash = 0xE297DA430DB2DF1AL ^ seed;
 		
 		for(int i = 0; i < length; i++)
