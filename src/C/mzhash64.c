@@ -39,10 +39,10 @@
 
 uint64_t mzhash64(const int8_t* data, int length, uint64_t seed)
 {
-	uint64_t hash = 0xD45E69F901E72147LL ^ seed;
+	uint64_t hash = 0xE297DA430DB2DF1ALL ^ seed;
 
 	for (int i = 0; i < length; i++)
-		hash = 0x3631754B22FF2D5CLL * (i + data[i]) ^ (hash << 2) ^ (hash >> 2);
+		hash = 0xB2DEEF07CB4ACD43LL * (i + data[i]) ^ (hash << 2) ^ (hash >> 2);
 
 	return hash;
 }
