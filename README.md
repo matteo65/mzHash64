@@ -53,8 +53,7 @@ MzHash64, like most non-cryptographic functions, is non-secure because it is not
 Like other non-cryptographic functions, its security depends on the secrecy of the possibly used seed.  
 
 ## Portability
-It is minimalist, elegant, straightforward and can be easily written in virtually any programming language. 
-Currently C and Java versions are available.
+It is minimalist, elegant, straightforward and can be easily written in virtually any programming language. It produces the same result with x86 and x64 (or different) platforms. Currently C and Java versions are available.
 
 ## Conclusion
 MzHash64 demonstrates to have an excellet quality of the dispersion, close to an ideal Universal Hash Function. It is simple, portable and produces same results in all platform. On the other hand it is slower than XX and Murmur3. If the goal is the quality of the dispersion and have the same result on all platforms, mzHash64 is certainly the function to choose!
