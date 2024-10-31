@@ -17,6 +17,10 @@ It is based on the same algorithm as [mzHash32](https://github.com/matteo65/mzHa
 ## Uniform distribution of hash values (diffusion)
 It has an absolutely uniform, chaotic distribution of hash values independent of the number, length and type of input values.  
 It also has a good Avalanche Effect property: even a minimal differences (1 bit) of input values produces very different hash values.  
+This is the screenshot of the VisualRT app related to the analysis of the file words_and_numbers.txt.mzhash64 which contains the hashes of all the words contained in the file words_and_numbers.txt  
+
+
+The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
 
 ## Minimum number of collisions
 MzHash64 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of an ideal Universal Hash Function.
