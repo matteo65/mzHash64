@@ -37,12 +37,13 @@
 #include <stdint.h> // uint64_t
 #include "mzhash64.h"
 
-uint64_t mzhash64(const int8_t* data, int length, uint64_t seed)
+uint64_t mzhash64(const void* data, int length, uint64_t seed)
 {
 	uint64_t hash = 0xE297DA430DB2DF1ALL ^ seed;
+	const int8_t* bytes = (const int8_t*) data;
 
 	for (int i = 0; i < length; i++)
-		hash = 0xB2DEEF07CB4ACD43LL * (i + data[i]) ^ (hash << 2) ^ (hash >> 2);
+		hash = 0xB2DEEF07CB4ACD43LL * (i + bytes[i]) ^ (hash << 2) ^ (hash >> 2);
 
 	return hash;
 }
