@@ -1,5 +1,6 @@
 #ifndef _MZHASH64_H
 #define _MZHASH64_H
+
 #include <stddef.h> // size_t
 #include <stdint.h> // uint64_t
 
