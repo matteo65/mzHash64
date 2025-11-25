@@ -27,13 +27,13 @@ Maximum byte frequency = 13768
 Variance = 14250.46  
 Standard Deviation = 119.38  
 Coefficient of Variation = 0.890%  
-Chi-Square Test = 272.002106307973  
-Average bytes value = 127.44860194973286 (127.5 random)  
-Entropy = 7.99994284676469 bits (8 random)  
+Chi-Square Test = 272.002  
+Average bytes value = 127.449 (127.5 random)  
+Entropy = 7.9999 bits (8 random)  
 Estimated Compressed Length = 3433496  
-Monte Carlo for Pi 2D = 3.1452252428575673 (error = 0.116%)  
-Monte Carlo for Pi 3D = 3.149575752492143 (error = 0.254%)  
-Average of Contiguous Byte Pairs = 32754.282620187303 (32767.5 random) (error 0.04%)  
+Monte Carlo for Pi 2D = 3.145225 (error = 0.116%)  
+Monte Carlo for Pi 3D = 3.149576 (error = 0.254%)  
+Average of Contiguous Byte Pairs = 32754.283 (32767.5 random) (error 0.04%)  
 4 Bytes Collisions = 87 (expected collisions = 85.77)  
 
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
