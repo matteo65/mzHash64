@@ -19,6 +19,23 @@ It has an absolutely uniform, chaotic distribution of hash values independent of
 It also has a good Avalanche Effect property: even a minimal differences (1 bit) of input values produces very different hash values.  
 This is the screenshot of the VisualRT app related to the analysis of the file words_and_numbers.txt.mzhash64 which contains the hashes of all the words contained in the file words_and_numbers.txt  
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash64/main/Resource/visualrt_screenshot.png)  
+File name = words_and_numbers.txt.mzhash64
+File length = 3433496
+File date = 2025-11-25 17:24:39
+Average byte frequency = 13412.09
+Minimum byte frequency = 13032
+Maximum byte frequency = 13768
+Variance = 14250.4599609375
+Standard Deviation = 119.38
+Coefficient of Variation = 0.890%
+Chi-Square Test = 272.002106307973
+Average bytes value = 127.44860194973286 (127.5 random)
+Entropy = 7.99994284676469 bits (8 random)
+Estimated Compressed Length = 3433496
+Monte Carlo for Pi 2D = 3.1452252428575673 (error = 0.116%)
+Monte Carlo for Pi 3D = 3.149575752492143 (error = 0.254%)
+Average of Contiguous Byte Pairs = 32754.282620187303 (32767.5 random) (error 0.04%)
+4 Bytes Collisions = 87 (expected collisions = 85.77)
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
 
 ## Minimum number of collisions
