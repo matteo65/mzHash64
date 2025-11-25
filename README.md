@@ -36,6 +36,7 @@ Monte Carlo for Pi 2D = 3.1452252428575673 (error = 0.116%)
 Monte Carlo for Pi 3D = 3.149575752492143 (error = 0.254%)  
 Average of Contiguous Byte Pairs = 32754.282620187303 (32767.5 random) (error 0.04%)  
 4 Bytes Collisions = 87 (expected collisions = 85.77)  
+
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
 
 ## Minimum number of collisions
