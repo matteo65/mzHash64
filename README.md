@@ -21,7 +21,6 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash64/main/Resource/visualrt_screenshot.png)  
 File name = words_and_numbers.txt.mzhash64  
 File length = 3433496  
-File date = 2025-11-25 17:24:39  
 Average byte frequency = 13412.09  
 Minimum byte frequency = 13032  
 Maximum byte frequency = 13768  
