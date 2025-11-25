@@ -4,12 +4,12 @@ Strong, fast, simple, non-cryptography hash function
 
 ```java
 public static long mzHash64(byte[] data, int start, int length, long seed) {	
-	long hash = 0xE297DA430DB2DF1AL ^ seed;
-		
-	for(int i = 0; i < length; i++)
-		hash = 0xB2DEEF07CB4ACD43L * (i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
-		
-	return hash;
+        long hash = 0xA7BB53D6328B05DBL ^ seed;
+        
+        for(int i = 0; i < length; i++)
+            hash = 0xCAC39506BB87F535L * (data[start + i] ^ hash ^ (hash << 2) ^ (hash >>> 2));
+        
+        return hash;
 }
 ```
 It is based on the same algorithm as [mzHash32](https://github.com/matteo65/mzHash32), except it uses 64-bit integers.
