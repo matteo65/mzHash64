@@ -63,6 +63,7 @@ Murmur3 |        **1**|Collision: **7A 37 28 87 4D A9 F8 1E**<br>Inputs: 023D8B9
 XXHash  |        **1**|Collision: **50 70 7F C1 20 21 83 0E**<br>Inputs: 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9, 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7
 
 ## Speed
+MzHash64 processes byte by byte, while Murmur and XX group 4 bytes at a time for each processing. Therefore, the speed of MzHash64 is lower, however, if the execution speed of MzHash64 is compared with other functions that process one byte at a time, it is very high-performance since the number of operations performed in each cycle is really low. The comparison obviously must be made with functions that guarantee an optimal number of collisions, close to a Universal Hash Function  
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash64/main/Resource/mzhash64speed.jpg)
 
 ## Vulnerability
