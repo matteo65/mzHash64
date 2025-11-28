@@ -57,11 +57,13 @@ Murmur3   |         **5**|Collision: **45 F0 06 CF E1 6F F4 D7**<br>Strings: "07
  &nbsp;   |     &nbsp;   |Collision: **C3 DC 2E 55 5B F3 82 A0**<br>Strings: "003AA63E8003AA63E8003AA63E8003AA63E8003AA63E8", "1AB1E788D1AB1E788D1AB1E788D1AB1E788D1AB1E788D"
  
  #### Number of collisions for 30 byte input bbbbbb, where b from 00 00 00 00 00 to 02 54 0B E3 FF - 10,000,000,000 values (expected 2.71 collisions)
-Function|  #Collisions| Values
-:---    |      ---:   | :---
-MzHash64|        **0**|&nbsp;
-Murmur3 |        **1**|Collision: **7A 37 28 87 4D A9 F8 1E**<br>Inputs: 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC, 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF
-XXHash  |        **1**|Collision: **50 70 7F C1 20 21 83 0E**<br>Inputs: 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9, 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7
+Function |  #Collisions| Values
+:---     |      ---:   | :---
+MzHash64 |        **3**|Collision: **43 B0 05 9C 7C 7B 79 89**<br>Inputs: 001978F414 001978F414 001978F414 001978F414 001978F414 001978F414, 01BB65FFA5 01BB65FFA5 01BB65FFA5 01BB65FFA5 01BB65FFA5 01BB65FFA5
+ &nbsp;  |     &nbsp;  |Collision: **22 A2 22 06 01 15 40 48**<br>Inputs: 01B426EC67 01B426EC67 01B426EC67 01B426EC67 01B426EC67 01B426EC67, 00E2E3D2CC 00E2E3D2CC 00E2E3D2CC 00E2E3D2CC 00E2E3D2CC 00E2E3D2CC
+ &nbsp;  |     &nbsp;  |Collision: **B2 FB 34 34 C2 2F 54 B8**<br>Inputs: 009ABC512E 009ABC512E 009ABC512E 009ABC512E 009ABC512E 009ABC512E, 0140A95175 0140A95175 0140A95175 0140A95175 0140A95175 0140A95175
+Murmur3  |        **1**|Collision: **7A 37 28 87 4D A9 F8 1E**<br>Inputs: 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC, 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF
+XXHash   |        **1**|Collision: **50 70 7F C1 20 21 83 0E**<br>Inputs: 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9, 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7
 
 ## Speed
 MzHash64 processes byte by byte, while Murmur and XX group 4 bytes at a time for each processing. Therefore, the speed of MzHash64 is lower, however, if the execution speed of MzHash64 is compared with other functions that process one byte at a time, it is very high-performance since the number of operations performed in each cycle is really low. The comparison obviously must be made with functions that guarantee an optimal number of collisions, close to a Universal Hash Function  
