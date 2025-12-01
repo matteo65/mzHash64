@@ -21,13 +21,13 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash64/main/Resource/visualrt_screenshot.png)  
 **File name** = words_and_numbers.txt.mzhash64  
 **File length** = 3433496  
-**Average byte frequency** = 13412.09  
+**Average byte frequency μ** = 13412.09  
 **Minimum byte frequency** = 13032  
 **Maximum byte frequency** = 13768  
-**Variance** = 14250.46  
-**Standard Deviation** = 119.38  
-**Coefficient of Variation** = 0.890%  
-**Chi-Square Test** = 272.002  
+**Variance σ<sup>2</sup>** = 14250.46  
+**Standard Deviation σ** = 119.38  
+**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.890%  
+**Chi-Square Testt 𝛘<sup>2</sup>** = 272.002  
 **Average bytes value** = 127.449 (127.5 random)  
 **Entropy** = 7.9999 bits (8 random)  
 **Estimated Compressed Length** = 3433496  
