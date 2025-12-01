@@ -31,8 +31,8 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 **Average bytes value** = 127.449 (127.5 random)  
 **Entropy** = 7.9999 bits (8 random)  
 **Estimated Compressed Length** = 3433496  
-**Monte Carlo for Pi 2D** = 3.145225 (error = 0.116%)  
-**Monte Carlo for Pi 3D** = 3.149576 (error = 0.254%)  
+**Monte Carlo for π 2D** = 3.145225 (error = 0.116%)  
+**Monte Carlo for π 3D** = 3.149576 (error = 0.254%)  
 **Average of Contiguous Byte Pairs** = 32754.283 (32767.5 random) (error 0.04%)  
 **4 Bytes Collisions** = 87 (expected collisions = 85.77)  
 
