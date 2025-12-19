@@ -71,7 +71,6 @@ MzHash64 processes byte by byte, while Murmur and XX group 4 bytes at a time for
 
 ## Vulnerability
 MzHash64, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
-Like other non-cryptographic functions, its security depends on the secrecy of the possibly used seed.  
 
 ## Portability
 It is minimalist, elegant, straightforward and can be easily written in virtually any programming language. It produces the same result with x86 and x64 (or different) platforms. Currently C and Java versions are available.
