@@ -4,8 +4,8 @@
  * Strong, fast, simple, non-cryptographic 64-bit hash function
  * 
  * Author: Matteo Zapparoli
- * Date: 2025-11
- * Reelease: 3
+ * Date: 2025-12
+ * Reelease: 4
  *
  * SPDX-FileCopyrightText: 2025 Matteo Zapparoli <zapparoli.matteo@gmail.com>
  * SPDX-License-Identifier: Apache-2.0
@@ -17,10 +17,10 @@ public class HashFunct64 {
 	private HashFunct64() {}
 
     public static long mzHash64(byte[] data, int start, int length, long seed) {    
-        long hash = 0xA7BB53D6328B05DBL ^ seed;
+        long hash = 0xDED46DB8C47B7480L ^ seed;
         
         for(int i = 0; i < length; i++)
-            hash = 0xCAC39506BB87F535L * (data[start + i] ^ hash ^ (hash << 2) ^ (hash >>> 2));
+            hash = 0xE958AC98E3D243C3L * (data[start + i] ^ (hash << 2) ^ (hash >>> 2));
         
         return hash;
     }
@@ -38,72 +38,92 @@ public class HashFunct64 {
 	}
 
 	public static long mzHash64(byte b, long seed) {
-		long hash = 0xA7BB53D6328B05DBL ^ seed;
-		return 0xCAC39506BB87F535L * (b ^ hash ^ (hash << 2) ^ (hash >>> 2));
+		long hash = 0xDED46DB8C47B7480L ^ seed;
+		return 0xE958AC98E3D243C3L * (b ^ (hash << 2) ^ (hash >>> 2));
 	}
 
 	public static long mzHash64(byte b) {
-		return 0xCAC39506BB87F535L * (b ^ 0x10B8C87B7405D3C1L);
+		return 0xE958AC98E3D243C3L * (b ^ 0x4CE4AD8D20F30F20L);
 	}
 
 	public static long mzHash64(short s, long seed) {
-	    long hash = 0xA7BB53D6328B05DBL ^ seed;
+	    long hash = 0xDED46DB8C47B7480L ^ seed;
 		
-		hash = 0xCAC39506BB87F535L * ((byte)s        ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * ((byte)(s >> 8) ^ hash ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)s        ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(s >> 8) ^ (hash << 2) ^ (hash >>> 2));
 		
 		return hash;
 	}
 
-	public static long mzHash64(short s) {
-		return mzHash64(s, 0);
+	public static long mzHash64(short s) {   
+        long hash = 0xE958AC98E3D243C3L * ((byte)s ^ 0x4CE4AD8D20F30F20L);
+        hash = 0xE958AC98E3D243C3L * ((byte)(s >> 8) ^ (hash << 2) ^ (hash >>> 2));
+        
+        return hash;
 	}
 
 	public static long mzHash64(int i, long seed) {
-		long hash = 0xA7BB53D6328B05DBL ^ seed;
+		long hash = 0xDED46DB8C47B7480L ^ seed;
 		
-		hash = 0xCAC39506BB87F535L * ((byte)i           ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(i >> 8))  ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(i >> 16)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(i >> 24)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)i           ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(i >> 8))  ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2));
 		
 		return hash;
 	}
 
 	public static long mzHash64(int i) {
-		return mzHash64(i, 0);
+        long hash = 0xE958AC98E3D243C3L * ((byte)i ^ 0x4CE4AD8D20F30F20L);
+        hash = 0xE958AC98E3D243C3L * (((byte)(i >> 8))  ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2));
+        
+        return hash;
 	}
 
 	public static long mzHash64(long l, long seed) {
-		long hash = 0xA7BB53D6328B05DBL ^ seed;
+		long hash = 0xDED46DB8C47B7480L ^ seed;
 		
-		hash = 0xCAC39506BB87F535L * ((byte)l           ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 8))  ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 16)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 24)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 32)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 40)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 48)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCAC39506BB87F535L * (((byte)(l >> 56)) ^ hash ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)l           ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 8))  ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2));
 		
 		return hash;
 	}
 
 	public static long mzHash64(long l) {
-		return mzHash64(l, 0);
+        long hash = 0xE958AC98E3D243C3L * ((byte)l ^ 0x4CE4AD8D20F30F20L);
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 8))  ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2));
+        
+        return hash;
 	}
 
 	public static long mzHash64(char c, long seed) {
-        long hash = 0xA7BB53D6328B05DBL ^ seed;
+        long hash = 0xDED46DB8C47B7480L ^ seed;
         
-        hash = 0xCAC39506BB87F535L * ((byte)c        ^ hash ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCAC39506BB87F535L * ((byte)(c >> 8) ^ hash ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)c        ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(c >> 8) ^ (hash << 2) ^ (hash >>> 2));
 		
 		return hash;
 	}
 
 	public static long mzHash64(char c) {
-		return mzHash64(c, 0);
+        long hash = 0xE958AC98E3D243C3L * ((byte)c ^ 0x4CE4AD8D20F30F20L);
+        hash = 0xE958AC98E3D243C3L * ((byte)(c >> 8) ^ (hash << 2) ^ (hash >>> 2));
+        
+        return hash;
 	}
 
 	public static long mzHashlong(String str, long seed) {
@@ -119,7 +139,8 @@ public class HashFunct64 {
 	}
 
 	public static long mzHash64(boolean b) {
-		return b ? 0x64832685955F7333L : 0x07DCF245E40CB8D1L;
+		return b ? 0x96C82C5370677FDAL : 0x95A8D10CABCCA92BL;
 	}
 
 }
+
