@@ -6,10 +6,9 @@ Strong, fast, simple, non-cryptography hash function
 uint64_t mzhash64(const void* data, size_t length, uint64_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	const int8_t *end = bytes + length;
 	uint64_t hash = 0xDED46DB8C47B7480uLL ^ seed;
 
-	while(bytes != end)
+	while(length--)
 		hash = 0xE958AC98E3D243C3uLL * (*bytes++ ^ hash * 4 ^ hash / 4);
 
 	return hash;
