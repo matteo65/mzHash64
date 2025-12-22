@@ -21,20 +21,20 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash64/main/Resource/visualrt_screenshot.png)  
 **File name** = words_and_numbers.txt.mzhash64  
 **File length** = 3433496  
-**Average byte frequency μ** = 13412.09  
-**Minimum byte frequency** = 13032  
-**Maximum byte frequency** = 13768  
-**Variance σ<sup>2</sup>** = 14250.46  
-**Standard Deviation σ** = 119.38  
-**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.890%  
-**Chi-Square Testt 𝛘<sup>2</sup>** = 272.002  
-**Average bytes value** = 127.449 (127.5 random)  
-**Entropy** = 7.9999 bits (8 random)  
+**Average byte frequency μ** = 13412.09375   
+**Minimum byte frequency** = 13094  
+**Maximum byte frequency** = 13751  
+**Variance σ<sup>2</sup>** = 12989.3271484375  
+**Standard Deviation σ** = 113.97072934941454  
+**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.8497609058944622%  
+**Chi-Square Testt 𝛘<sup>2</sup>** = 247.93054775657217  
+**Average bytes value** = 127.49824056879635 (127.5 random)  
+**Entropy** = 7.9999479195420005 bits (8 random)  
 **Estimated Compressed Length** = 3433496  
-**Monte Carlo for π 2D** = 3.145225 (error = 0.116%)  
-**Monte Carlo for π 3D** = 3.149576 (error = 0.254%)  
-**Average of Contiguous Byte Pairs** = 32754.283 (32767.5 random) (error 0.04%)  
-**4 Bytes Collisions** = 87 (expected collisions = 85.77)  
+**Monte Carlo for π 2D** = 3.143072333896608 (error = 0.047099687005057345%)  
+**Monte Carlo for π 3D** = 3.142514135030498 (error = 0.02933166525112935%)  
+**Average of Contiguous Byte Pairs** = 32767.04712865462 (32767.5 random) (error 0.001382074755108316%)  
+**4 Bytes Collisions** = 86 (expected collisions = 85.76968479156494)  
 
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
 
