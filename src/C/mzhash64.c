@@ -22,7 +22,7 @@ uint64_t mzhash64(const void* data, size_t length, uint64_t seed)
 	uint64_t hash = 0xDED46DB8C47B7480uLL ^ seed;
 
 	while(bytes != end)
-		hash = 0xE958AC98E3D243C3uLL * (*bytes++ ^ hash ^ (hash << 2) ^ (hash >> 2));
+		hash = 0xE958AC98E3D243C3uLL * (*bytes++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
@@ -34,7 +34,7 @@ uint64_t mzhash64_noseed(const void* data, size_t length)
 	uint64_t hash = 0xDED46DB8C47B7480uLL;
 
 	while(bytes != end)
-		hash = 0xE958AC98E3D243C3uLL * (*bytes++ ^ hash ^ (hash << 2) ^ (hash >> 2));
+		hash = 0xE958AC98E3D243C3uLL * (*bytes++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
@@ -44,7 +44,7 @@ uint64_t mzhash64_str(const char* str, uint64_t seed)
 	uint64_t hash = 0xDED46DB8C47B7480uLL ^ seed;
 
 	while(*str)
-		hash = 0xE958AC98E3D243C3uLL * (*str++ ^ hash ^ (hash << 2) ^ (hash >> 2));
+		hash = 0xE958AC98E3D243C3uLL * (*str++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
@@ -54,7 +54,8 @@ uint64_t mzhash64_str_noseed(const char* str)
 	uint64_t hash = 0xDED46DB8C47B7480uLL;
 
 	while(*str)
-		hash = 0xE958AC98E3D243C3uLL * (*str++ ^ hash ^ (hash << 2) ^ (hash >> 2));
+		hash = 0xE958AC98E3D243C3uLL * (*str++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
+
