@@ -65,19 +65,19 @@ public class HashFunct64 {
 	public static long mzHash64(int i, long seed) {
 		long hash = 0xDED46DB8C47B7480L ^ seed;
 		
-		hash = 0xE958AC98E3D243C3L * ((byte)i           ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(i >> 8))  ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)i         ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(i >> 8)  ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(i >> 16) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(i >> 24) ^ (hash << 2) ^ (hash >>> 2));
 		
 		return hash;
 	}
 
 	public static long mzHash64(int i) {
         long hash = 0xE958AC98E3D243C3L * ((byte)i ^ 0x4CE4AD8D20F30F20L);
-        hash = 0xE958AC98E3D243C3L * (((byte)(i >> 8))  ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(i >> 8)  ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(i >> 16) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(i >> 24) ^ (hash << 2) ^ (hash >>> 2));
         
         return hash;
 	}
@@ -85,27 +85,27 @@ public class HashFunct64 {
 	public static long mzHash64(long l, long seed) {
 		long hash = 0xDED46DB8C47B7480L ^ seed;
 		
-		hash = 0xE958AC98E3D243C3L * ((byte)l           ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 8))  ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xE958AC98E3D243C3L * (((byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)l         ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 8)  ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 16) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 24) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 32) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 40) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 48) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0xE958AC98E3D243C3L * ((byte)(l >> 56) ^ (hash << 2) ^ (hash >>> 2));
 		
 		return hash;
 	}
 
 	public static long mzHash64(long l) {
         long hash = 0xE958AC98E3D243C3L * ((byte)l ^ 0x4CE4AD8D20F30F20L);
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 8))  ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xE958AC98E3D243C3L * (((byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 8)  ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 16) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 24) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 32) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 40) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 48) ^ (hash << 2) ^ (hash >>> 2));
+        hash = 0xE958AC98E3D243C3L * ((byte)(l >> 56) ^ (hash << 2) ^ (hash >>> 2));
         
         return hash;
 	}
@@ -143,4 +143,5 @@ public class HashFunct64 {
 	}
 
 }
+
 
