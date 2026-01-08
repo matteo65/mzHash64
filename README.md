@@ -24,19 +24,19 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 **File name** = words_and_numbers.txt.mzhash64  
 **File length** = 3433496  
 **Average byte frequency μ** = 13412.094   
-**Minimum byte frequency** = 13094  
-**Maximum byte frequency** = 13751  
-**Variance σ<sup>2</sup>** = 12989.327  
-**Standard Deviation σ** = 113.971  
-**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.850%  
-**Chi-Square Testt 𝛘<sup>2</sup>** = 247.931  
-**Average bytes value** = 127.498 (127.5 random)  
+**Minimum byte frequency** = 13122  
+**Maximum byte frequency** = 13834  
+**Variance σ<sup>2</sup>** = 12148.194  
+**Standard Deviation σ** = 110.219  
+**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.821%  
+**Chi-Square Testt 𝛘<sup>2</sup>** = 231.876  
+**Average bytes value** = 127.528 (127.5 random)  
 **Entropy** = 7.99995 bits (8 random)  
 **Estimated Compressed Length** = 3433496  
-**Monte Carlo for π 2D** = 3.143072 (error = 0.047%)  
-**Monte Carlo for π 3D** = 3.142514 (error = 0.029%)  
-**Average of Contiguous Byte Pairs** = 32767.047 (32767.5 random) (error 0.001%)  
-**4 Bytes Collisions** = 86 (expected collisions = 85.770)  
+**Monte Carlo for π 2D** = 3.141765 (error = 0.005%)  
+**Monte Carlo for π 3D** = 3.139448 (error = 0.068%)  
+**Average of Contiguous Byte Pairs** = 32774.648 (32767.5 random) (error 0.022%)  
+**4 Bytes Collisions** = 85 (expected collisions = 85.770)  
 
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
 
