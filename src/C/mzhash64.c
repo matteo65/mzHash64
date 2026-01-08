@@ -1,7 +1,7 @@
 /**
  * mzhash64
  * 
- * Strong, fast, simple, non-cryptographic 32-bit hash function
+ * Strong, fast, simple, non-cryptographic 64-bit hash function
  * 
  * Author: Matteo Zapparoli
  * Date: 2026-01
@@ -56,3 +56,4 @@ uint64_t mzhash64_str_noseed(const char* str)
 
 	return hash;
 }
+
