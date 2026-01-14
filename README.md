@@ -6,10 +6,10 @@ Strong, fast, simple, non-cryptography hash function
 uint64_t mzhash64(const void* data, size_t length, uint64_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint64_t hash = 0xFA3BE25AB0E56E7FuLL ^ seed;
+	uint64_t hash = 0xB04C2438F4F7D8D1uLL ^ seed;
 
 	while(length--)
-		hash = 0x364BD2EE336025ABuLL * (*bytes++ ^ hash * 2 ^ hash / 2);
+		hash = 0xD76F648260B0F9FDuLL * (*bytes++ ^ hash * 256 ^ hash / 256);
 
 	return hash;
 }
@@ -24,19 +24,19 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 **File name** = words_and_numbers.txt.mzhash64  
 **File length** = 3433496  
 **Average byte frequency μ** = 13412.094   
-**Minimum byte frequency** = 13122  
-**Maximum byte frequency** = 13834  
+**Minimum byte frequency** = 13099  
+**Maximum byte frequency** = 13719  
 **Variance σ<sup>2</sup>** = 12148.194  
-**Standard Deviation σ** = 110.219  
-**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.821%  
-**Chi-Square Testt 𝛘<sup>2</sup>** = 231.876  
-**Average bytes value** = 127.528 (127.5 random)  
-**Entropy** = 7.99995 bits (8 random)  
+**Standard Deviation σ** = 104.769  
+**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 0.781%  
+**Chi-Square Testt 𝛘<sup>2</sup>** = 209.511  
+**Average bytes value** = 127.482 (127.5 random)  
+**Entropy** = 7.99996 bits (8 random)  
 **Estimated Compressed Length** = 3433496  
-**Monte Carlo for π 2D** = 3.141765 (error = 0.005%)  
-**Monte Carlo for π 3D** = 3.139448 (error = 0.068%)  
-**Average of Contiguous Byte Pairs** = 32774.648 (32767.5 random) (error 0.022%)  
-**4 Bytes Collisions** = 85 (expected collisions = 85.770)  
+**Monte Carlo for π 2D** = 3.141821 (error = 0.007%)  
+**Monte Carlo for π 3D** = 3.144071 (error = 0.079%)  
+**Average of Contiguous Byte Pairs** = 32762.927 (32767.5 random) (error 0.022%)  
+**4 Bytes Collisions** = 86 (expected collisions = 85.770)  
 
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
 
@@ -47,10 +47,7 @@ MzHash64 produces a very low number of collisions for each reasonably large numb
 
 Function |  #Collisions | Values
 :---      |      ---:    | :---
-MzHash64  |         **4**|Collision: **C9 F7 C6 63 AE 24 C4 FC**<br>Strings: "023897F03023897F03023897F03023897F03023897F03", "0A6498F4F0A6498F4F0A6498F4F0A6498F4F0A6498F4F"
- &nbsp;   |     &nbsp;   |Collision: **3E 3C 28 22 0E 0A BA 3B**<br>Strings: "048B0BDC9048B0BDC9048B0BDC9048B0BDC9048B0BDC9", "161FB14EE161FB14EE161FB14EE161FB14EE161FB14EE"
- &nbsp;   |     &nbsp;   |Collision: **12 8A 63 3C 8C 1C 12 AB**<br>Strings: "1256D22851256D22851256D22851256D22851256D2285", "154E270FA154E270FA154E270FA154E270FA154E270FA"
- &nbsp;   |     &nbsp;   |Collision: **03 F9 78 C1 01 43 51 5D**<br>Strings: "0CEE6CEC20CEE6CEC20CEE6CEC20CEE6CEC20CEE6CEC2", "1261D44C41261D44C41261D44C41261D44C41261D44C4"
+MzHash64  |         **0**|
 Murmur3   |         **5**|Collision: **45 F0 06 CF E1 6F F4 D7**<br>Strings: "07AF2BABB07AF2BABB07AF2BABB07AF2BABB07AF2BABB", "184D0B97E184D0B97E184D0B97E184D0B97E184D0B97E"
  &nbsp;   |     &nbsp;   |Collision: **88 B9 B4 F8 9A EF 0B 0D**<br>Strings: "1C60B95911C60B95911C60B95911C60B95911C60B9591", "1F3A5D9AE1F3A5D9AE1F3A5D9AE1F3A5D9AE1F3A5D9AE"
  &nbsp;   |     &nbsp;   |Collision: **B1 B2 60 25 7D 9C DF 95**<br>Strings: "0E152D31E0E152D31E0E152D31E0E152D31E0E152D31E", "181B53CCC181B53CCC181B53CCC181B53CCC181B53CCC"
@@ -63,8 +60,10 @@ Murmur3   |         **5**|Collision: **45 F0 06 CF E1 6F F4 D7**<br>Strings: "07
  #### Number of collisions for 30 byte input bbbbbb, where b from 00 00 00 00 00 to 02 54 0B E3 FF - 10,000,000,000 values (expected 2.71 collisions)
 Function |  #Collisions| Values
 :---     |      ---:   | :---
-MzHash64 |        **2**|Collision: **1F 2E CE 8E 27 B4 D6 34**<br>Inputs: 013879469E 013879469E 013879469E 013879469E 013879469E 013879469E,<br> 01A22576AC 01A22576AC 01A22576AC 01A22576AC 01A22576AC 01A22576AC
- &nbsp;  |     &nbsp;  |Collision: **38 3D 84 BB 08 09 C7 AA**<br>Inputs: 004A1521F3 004A1521F3 004A1521F3 004A1521F3 004A1521F3 004A1521F3,<br> 0229F56DCF 0229F56DCF 0229F56DCF 0229F56DCF 0229F56DCF 0229F56DCF
+MzHash64 |        **4**|Collision: **1B 90 DC C5 C2 62 B1 83**<br>Inputs: 00762111B0 00762111B0 00762111B0 00762111B0 00762111B0 00762111B0,<br> 023FBC69B6 023FBC69B6 023FBC69B6 023FBC69B6 023FBC69B6 023FBC69B6
+ &nbsp;  |     &nbsp;  |Collision: **40 C3 75 F9 04 37 09 C7**<br>Inputs: 012966CBD8 012966CBD8 012966CBD8 012966CBD8 012966CBD8 012966CBD8,<br> 01A00A3F6F 01A00A3F6F 01A00A3F6F 01A00A3F6F 01A00A3F6F 01A00A3F6F
+ &nbsp;  |     &nbsp;  |Collision: **DE 40 F6 49 75 36 DC 1B**<br>Inputs: 00DA3B3137 00DA3B3137 00DA3B3137 00DA3B3137 00DA3B3137 00DA3B3137,<br> 00E699F82A 00E699F82A 00E699F82A 00E699F82A 00E699F82A 00E699F82A
+ &nbsp;  |     &nbsp;  |Collision: **EC 38 71 CD 37 34 85 73**<br>Inputs: 01AADC4070 01AADC4070 01AADC4070 01AADC4070 01AADC4070 01AADC4070,<br> 0237500A73 0237500A73 0237500A73 0237500A73 0237500A73 0237500A73
 Murmur3  |        **1**|Collision: **7A 37 28 87 4D A9 F8 1E**<br>Inputs: 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC 023D8B9FEC,<br> 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF 0249F3C8FF
 XXHash   |        **1**|Collision: **50 70 7F C1 20 21 83 0E**<br>Inputs: 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9 010F132BC9,<br> 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7 01B215C6D7
 
