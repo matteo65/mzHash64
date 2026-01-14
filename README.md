@@ -35,7 +35,7 @@ This is the screenshot of the VisualRT app related to the analysis of the file w
 **Estimated Compressed Length** = 3433496  
 **Monte Carlo for π 2D** = 3.141821 (error = 0.007%)  
 **Monte Carlo for π 3D** = 3.144071 (error = 0.079%)  
-**Average of Contiguous Byte Pairs** = 32762.927 (32767.5 random) (error 0.013%)  
+**Average of Contiguous Byte Pairs** = 32762.927 (32767.5 random) (error 0.014%)  
 **4 Bytes Collisions** = 86 (expected collisions = 85.770)  
 
 The analysis does not indicate the presence of any statistical anomaly and therefore the file can be considered random, demonstrating the goodness of the distribution of the hash values.  
