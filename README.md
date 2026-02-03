@@ -1,4 +1,4 @@
-# mzHash64
+# mzHash64 release 5
 
 Strong, fast, simple, non-cryptography hash function
 
