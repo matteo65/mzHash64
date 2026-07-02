@@ -9,7 +9,7 @@ uint64_t mzhash64(const void* data, size_t length, uint64_t seed)
 	uint64_t hash = 0xB04C2438F4F7D8D1uLL ^ seed;
 
 	while(length--)
-		hash = 0xD76F648260B0F9FDuLL * (*bytes++ ^ hash * 256 ^ hash / 256);
+		hash = 0xD76F648260B0F9FDuLL * (*bytes++ ^ (hash * 256) ^ (hash / 256));
 
 	return hash;
 }
